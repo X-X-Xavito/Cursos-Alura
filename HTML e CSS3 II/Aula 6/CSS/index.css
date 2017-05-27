@@ -1,3 +1,9 @@
+.titulo-principal {
+    background-image:linear-gradient(to bottom, #FFF, #F00 25%, #000);
+    background-size: 100% 200px;
+    background-repeat: no-repeat;
+}
+
 html, body {
     height: 100%;
     overflow-x: hidden;
@@ -98,6 +104,9 @@ body {
     background-color: #3C1D3D;
     border-top: .5em solid #000;
     border-bottom: .5em solid #000;
+    background-image:linear-gradient(135deg, transparent, transparent 14px, rgba(0,0,0,.1) 14px, rgba(0,0,0,.1) 15px, transparent 15px, transparent);
+    background-size: 20px 20px;
+    background-attachment: fixed;
 }
 .trabalhos h2 {
     color: #FFF;
@@ -116,6 +125,9 @@ body {
 }
 .blog {
     background-color: #999;
+    background-image:linear-gradient(45deg, transparent, transparent 14px, rgba(255, 255, 255, 0.1) 14px, rgba(255, 255, 255, 0.1) 15px, transparent 15px, transparent);
+    background-size: 20px 20px;
+    background-attachment: fixed;
     position: relative;
     color: #FFF;
     border-bottom: .5em solid #851944;
