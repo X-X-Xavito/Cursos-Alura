@@ -13,7 +13,8 @@ h2,
 
 h1 {
     text-transform: uppercase;
-    font-size: 60px;
+    font-size: 3em;
+    text-shadow: 3px 3px #000;
 }
 
 .titulo-principal {
@@ -22,7 +23,6 @@ h1 {
     color: #FFF;
     padding: 2rem;
     border-bottom: .5rem solid #000;
-
 }
 
 .subtitulo-texto {
@@ -34,17 +34,23 @@ main a {
     color: #851944;
 }
 
+main a:hover,
+main a:focus,
+footer a:focus,
+footer a:hover {
+    color: red;
+}
 
 main p {
     text-align: justify;
-    margin: 20px 0;
+    margin: 1em 0;
 }
 
 .navegacao-site {
     text-align: center;
     background-color: #3C1D3D;
     color: #F2FFFC;
-    padding: 20px;
+    padding: 1em;
 }
 
 .navegacao-site a {
@@ -53,31 +59,41 @@ main p {
     text-transform: lowercase;
 }
 
+.navegacao-site a:hover,
+.navegacao-site a:focus {
+    text-shadow: 0 0 2px pink;
+}
+
 .navegacao-site h1 {
     font-size: 1.5em;
-    margin-bottom: 25px;
+    margin-bottom: 1em;
 }
 
 .rodape-pagina {
-    background-image:radial-gradient(ellipse at left bottom, rgba(60, 29, 61, 0.8),rgba(60, 29, 61, 0.8) 65%, black 65%, black 70%,transparent 70%, transparent );
-    background-size: 25% 100%;
-    background-repeat:no-repeat;
     color: #F2FFFC;
-    padding: 20px;
+    padding: 1em;
     clear: both;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     box-sizing: border-box;
- 
+    background-repeat: no-repeat;
+    text-shadow: 1px 1px black;
+    background-image: radial-gradient(ellipse at left bottom,
+        rgba(60, 29, 61, 0.8),
+        rgba(60, 29, 61, 0.8) 65%,
+        black 65%,
+        black 70%,
+        transparent 70%);
+    background-size: 25% 100%;
 }
 
 .container {
     width: 80ch;
     margin-left: auto;
     margin-right: auto;
-    padding: 30px 0;
+    padding: 1.5em 0;
 }
 
 strong {
@@ -93,39 +109,11 @@ em {
 }
 
 .icones-redes-sociais a {
-    position:relative;
     width: 40px;
     height: 40px;
     display: block;
     text-indent: -99999px;
 }
-
-.icones-redes-sociais a:hover::after,
-.icones-redes-sociais a:focus::after {
-    position: absolute;
-    content: attr(data-tooltip);
-    text-indent:0;
-    top: 100%;
-    right:0;
-    width: 300%;
-    background-color:black;
-    font-size: .75em;
-}
-
-.icones-redes-sociais a:hover::before,
-.icones-redes-sociais a:focus::before {
-
-    content: '';
-    background-color: black;
-    width: 1em;
-    height: 1em;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translateY(.5em) rotate(45deg);
-}
-
-
 
 .github {
     background-image: url(../imagens/github.png);
@@ -147,8 +135,8 @@ main {
 
 .minha-foto,
 .navegacao-site {
-    border-left: 10px solid black;
-    border-bottom: 10px solid black;
+    border-left: .5em solid black;
+    border-bottom: .5em solid black;
     box-sizing: border-box;
 }
 
@@ -166,15 +154,31 @@ main {
     height: 300px;
 }
 
-main a:hover,
-main a:focus,
-footer a:hover,
-footer a:focus {
-    color: red;
+.icones-redes-sociais a {
+    position: relative;
 }
 
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: black;
+    color: white;
+    top: 100%;
+    width: 300%;
+    right: 0;
+    text-indent: 0;
+    font-size: .75em;
+}
 
-.navegacao-site a:hover,
-.navegacao-site a:focus {
-    text-shadow: 0 0 2px pink;
+.icones-redes-sociais a:hover::before,
+.icones-redes-sociais a:focus::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    background-color: black;
+    transform: translateY(.5em) rotate(45deg);
 }
