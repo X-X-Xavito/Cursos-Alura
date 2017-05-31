@@ -68,3 +68,54 @@ input[value="Outro"] ~ input{
 input[value="Outro"]:checked ~ input{
     display: inline;
 }
+
+
+label[for="nome"]{
+    position:relative;
+}
+
+label[for="nome"]:before{
+    content: "";
+    background-image: url(../imagens/usuario.png);
+    background-color: #666;
+    position: absolute;
+    width: 1.4em;
+    height: 1.4em;
+    top: 120%;
+    left:0;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: center;
+    
+}
+
+#nome{
+    width: calc(100% - 2em);
+    position: relative;
+    left: 2em;
+}
+
+label[for="e-mail"]{
+    position: relative;
+}
+
+label[for="e-mail"]:before{
+    content: "";
+    background-image: url(../imagens/email.png);
+    background-color: #666;
+    background-size: 50% 50%;
+    background-repeat:no-repeat;
+    background-position: center;
+    width: 1.4em;
+    height: 1.4em;
+    position: absolute;
+    top:120%;
+    left: 0;
+    
+}
+
+#e-mail{
+    width: calc(100% - 2em);
+    position: relative;
+    left: 2em;
+}
