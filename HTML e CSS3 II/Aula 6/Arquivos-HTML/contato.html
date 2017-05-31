@@ -6,7 +6,7 @@
     <link rel="icon" href="imagens/favicon.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/site.css">
-    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/contato.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
 </head>
@@ -15,33 +15,43 @@
         <h1 class="titulo-principal">Contato</h1>
         <div class="container">
             <form>
-                <fieldset>
-                    <legend>Dados pessoais</legend>
-                        <label id="nome">Nome:</label>
-                            <input for="nome" name="nome" placeholder="Seu nome" autofocus>
-                        <label id="e-mail" type="e">Email:</label>
-                            <input for="e-mail" name="e-mail" placeholder="seu@email.com" type="email" required autofocus>
+                <fieldset class="campos-de-preenchimento">
+                    <legend class="titulo-legenda">Dados pessoais</legend>
+
+                            <label  for="nome">Nome:</label>
+                            <input class="input-nome campo-de-preenchimento" type="text" id="nome" name="nome" placeholder="Seu nome" pattern="[A-Za-z ']{4,}" title="Apenas letras maiúsculas, minúsculas e '. Minimo de 4 caracteres"  required >
+  
+                            <label for="e-mail" type="email">Email:</label>
+                            <input class="input-email campo-de-preenchimento" id="e-mail" name="e-mail" placeholder="seu@email.com" type="email" required >
+                    
                 </fieldset>
                 
-                <fieldset>
-                    <legend>Assunto</legend>
-                    <label>
-                        <input type="radio" name="assunto" value="Consult">
-                            Consultoria
-                    </label>
-                    <label>
-                        <input type="radio" name="assunto" value="Blog">
+                <fieldset class="seletores-assuntos">
+                 
+                    <legend class="titulo-legenda ">Assunto</legend>
+                 
+                        <label>
+                            <input type="radio" name="assunto" value="Blog">
                             Blog
-                    </label>
-                    <label>
-                        <input type="radio" name="assunto" value="Outro">
-                            Outro
-                    </label>
+                        </label>
+                        <label>
+                            <input type="radio" name="assunto" value="Serviço">
+                            Serviço
+                        </label>
+                    
+                        <fieldset class="outro-assunto">
+                            <input class="circulo-escolha" type="radio" name="assunto" value="Outro" id="outro">
+                            <label for="outro">Outro</label>
+                            <input class="input-outro-assunto" type="text" name="outro-assunto">
+                        </fieldset>
+               
+               
                 </fieldset>
-                    <label id="msg">Mensagem</label>
-                        <textarea for="msg" cols="30" rows="6" required></textarea>
-                    <button type="submit"><strong>Enviar para mim</strong></button>
-
+                    <div class="campo-mensagem">
+                        <label class="titulo-legenda mensagem" for="msg">Mensagem</label>
+                            <textarea class="campo-de-preenchimento" id="msg" cols="60" rows="10" required placeholder="Digite aqui sua mensagem"></textarea>
+                        <button type="submit"><strong>Enviar para mim</strong></button>
+                    </div>
                 
             </form>
         </div>
