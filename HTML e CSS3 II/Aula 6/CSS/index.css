@@ -2,6 +2,7 @@
     background-image:linear-gradient(to bottom, #FFF, #F00 25%, #000);
     background-size: 100% 200px;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 html, body {
@@ -48,7 +49,7 @@ body {
 }
 
 .banner-twitter {
-    width: 14em;
+    width: 16em;
     line-height: 1;
     padding: 1em 0;
     box-sizing: border-box;
@@ -63,10 +64,10 @@ body {
     font-family: "Open Sans Condensed", sans-serif;
     
     position: absolute;
-    top: 0;
+    bottom: 110%;
     right: 0;
     transform-origin: 0 0;
-    transform: translate(6.5754em, -2.4749em) rotate(45deg);
+    transform: translate(calc(.707*(3.5em - 100%) + 100%), calc(.707*3.5em)) rotate(45deg);
 
 }
 
@@ -255,9 +256,7 @@ main {
     opacity: .5;
 }
 
-.titulo-principal {
-    position: relative;
-}
+
 .blog .inicio-post {
     position: absolute;
     top: 4em;
