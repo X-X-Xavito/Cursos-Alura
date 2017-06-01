@@ -57,11 +57,13 @@ main p {
     color: inherit;
     font-family: "Open Sans Condensed", "Arial", sans-serif;
     text-transform: lowercase;
+
 }
 
 .navegacao-site a:hover,
 .navegacao-site a:focus {
     text-shadow: 0 0 2px pink;
+
 }
 
 .navegacao-site h1 {
@@ -128,7 +130,7 @@ em {
 }
 
 main {
-    width: 80%;
+    width: calc(100% - 0.9*300px);
     float: left;
     padding-bottom: 4em;
 }
@@ -141,7 +143,7 @@ main {
 }
 
 .navegacao-site {
-    width: 20%;
+    width: calc(300px*0.9);
     float: right;
     position: relative;
     top: 300px;
