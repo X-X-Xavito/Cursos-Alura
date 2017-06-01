@@ -1,5 +1,5 @@
 .titulo-principal {
-    background-image:linear-gradient(to bottom, #FFF, #F00 25%, #000);
+
     background-size: 100% 200px;
     background-repeat: no-repeat;
     position: relative;
@@ -29,6 +29,12 @@ body {
     line-height: 1;
     padding: 2em;
 }
+
+.saudacao:hover em,
+.saudacao:focus em{
+    -webkit-animation-play-state:paused;
+    animation-play-state:paused;
+}
 .saudacao-inicio {
     font-size: 3em;
     color: #889;
@@ -46,6 +52,30 @@ body {
     font-size: 4em;
     display: inline-block;
     transform: rotate(-5deg)  skew(-10deg);
+    -webkit-animation: flutua 2s;
+    animation: flutua .5s infinite;
+    position: relative;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    
+}
+
+@keyframes flutua{
+    0%{
+        top:-5px;
+    }
+    100%{
+        top:5px;
+    }
+}
+
+-webkit-@keyframes flutua{
+    0%{
+        top:-5px;
+    }
+    100%{
+        top:5px;
+    }
 }
 
 .banner-twitter {
@@ -68,6 +98,10 @@ body {
     right: 0;
     transform-origin: 0 0;
     transform: translate(calc(.707*(3.5em - 100%) + 100%), calc(.707*3.5em)) rotate(45deg);
+    -webkit-animation: aparece .5s;
+    animation: aparece .5s;
+    animation-delay: 2s;
+    animation-fill-mode:backwards;
 
 }
 
@@ -90,6 +124,7 @@ body {
     margin: 2em auto;
     display: block;
     text-align: center;
+    transition:.5s;
 }
 
 
@@ -176,6 +211,29 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
+    -webkit-animation: aparece 2s linear;
+    animation: aparece 2s linear;
+    animation-timing-function: ease-in-out;
+    
+}
+
+-webkit-@keyframes aparece{
+    from{
+        opacity: 0;
+        transform: scale(0.001);
+    }
+    to{
+        opacity: 1;
+    }
+
+}
+
+@keyframes aparece{
+    from{
+        opacity: 0;
+        transform: scale(0.001);
+    }
+
 }
 
 
@@ -274,10 +332,11 @@ main {
     display: block;
 }
 
-.blog a:hover,
-.blog a:focus {
-    background-color: #F2FFFC;
-    color: #F26;
+.botao-index:hover,
+.botao-index:focus {
+    box-shadow: 0 0 1em #FA9;
+    background-color: #C54974;
+    color: white;
 }
 .blog .mais-recente {
     background-color: #F2FFFC;
